@@ -1,0 +1,16 @@
+@use "./styles/variables" as *;
+@use "./styles/mixins" as *;
+
+#root {
+    display: flex;
+    flex-direction: row;
+    height: 89.9vh;
+    gap: 2rem;
+}
+
+body {
+    flex-direction: row;
+    padding: 2rem 8rem;
+    background: $primary-background;
+    color: $primary-text;
+}

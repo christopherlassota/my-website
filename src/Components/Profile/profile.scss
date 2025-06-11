@@ -1,0 +1,23 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.profile {
+    @include glass-card;
+    width: 30%;
+
+    &__picture {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    // &__name {}
+
+    &__quick-icon {
+        width: 1rem;
+        height: 1rem;
+        background-color: white;
+    }
+
+}
