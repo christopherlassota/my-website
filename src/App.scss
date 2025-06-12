@@ -1,6 +1,14 @@
 @use "./styles/variables" as *;
 @use "./styles/mixins" as *;
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // list-style-type: none;
+  text-decoration: none;
+}
+
 #root {
     display: flex;
     flex-direction: row;
@@ -13,4 +21,16 @@ body {
     padding: 2rem 8rem;
     background: $primary-background;
     color: $primary-text;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+  all: unset;
 }

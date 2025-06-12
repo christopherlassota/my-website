@@ -18,10 +18,18 @@ const Profile = () => {
         </li>
       </ul>
       <ul className="profile__quick-link-list">
-        <li className="profile__quick-link"><div className="profile__quick-icon"></div></li>
-        <li className="profile__quick-link"><div className="profile__quick-icon"></div></li>
-        <li className="profile__quick-link"><div className="profile__quick-icon"></div></li>
-        <li className="profile__quick-link"><div className="profile__quick-icon"></div></li>
+        <li className="profile__quick-link">
+          <div className="profile__quick-icon"></div>
+        </li>
+        <li className="profile__quick-link">
+          <div className="profile__quick-icon"></div>
+        </li>
+        <li className="profile__quick-link">
+          <div className="profile__quick-icon"></div>
+        </li>
+        <li className="profile__quick-link">
+          <div className="profile__quick-icon"></div>
+        </li>
       </ul>
     </section>
   );

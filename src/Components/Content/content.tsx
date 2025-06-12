@@ -1,10 +1,26 @@
+import ProjectCard from "../ProjectCard/ProjectCard";
 import "./Content.scss";
+
+const projectsArray = [
+    {
+        "title": "InStock",
+        "imageUrl": "/images/InStock.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus necessitatibus sint non labore magni repudiandae.",
+        "tags": ["React", "Typescript", "SCSS"] 
+    }
+]
 
 const Content = () => {
     return (
         <section className="content">
-            <h1 className="content__title">Welcome to the Content Section</h1>
-            <p className="content__description">This is where the main content will be displayed.</p>
+            {projectsArray.map((project) => (
+            <ProjectCard 
+            title={project.title}
+            imageUrl={project.imageUrl}
+            description={project.description}
+            tags={project.tags}
+            />
+            ))}
         </section>
     );
 }
