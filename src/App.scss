@@ -6,13 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // list-style-type: none;
   text-decoration: none;
-}
-
-#root {
-    height: 89.9vh;
-    gap: 2rem;
 }
 
 body {
@@ -55,14 +49,6 @@ h3 {
 
 p {
   font-size: 1rem;
-
-  @include tablet {
-    font-size: 1.4rem;
-  }
-
-  @include desktop {
-    font-size: 2rem;
-  }
 }
 
 ul {

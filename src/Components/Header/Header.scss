@@ -1,2 +1,40 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
+
+.header {
+    @include flex-center(row, space-between);
+    padding: 0 1rem 1rem 1rem;
+    border-bottom: 1px solid white;
+
+    &__logo {
+        background-color: black;
+        border: 1px solid white;
+        padding: 0.5rem;
+    }
+    // &__navigation {}
+    &__waffle {
+        @include desktop {
+            display: none;
+        }
+    }
+    &__nav-list {
+        display: none;
+        gap: 0.5rem;
+
+        @include desktop {
+            @include flex-center;
+        }
+    }
+    // &__nav-link {}
+    &__contact {
+        display: none;
+        
+        @include desktop {
+            @include flex-center;
+            gap: 0.5rem;
+            background-color: black;
+            border: 1px solid white;
+            padding: 0.5rem;
+        }
+    }
+}
