@@ -1,9 +1,12 @@
 import "./App.scss";
+import Header from "./Components/Header/Header";
+import Hero from "./Components/Hero/Hero";
 
 const App = () => {
   return (
     <>
-    <h1>Christopher Lassota</h1>
+    <Header />
+    <Hero />
     </>
   );
 }
