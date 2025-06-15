@@ -2,6 +2,7 @@
 @use "./styles/mixins" as *;
 
 * {
+  font-family: "Manrope", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,9 +19,52 @@
 
 body {
     flex-direction: row;
-    padding: 2rem 8rem;
+    padding: 2rem;
     background: $primary-background;
     color: $primary-text;
+
+    @include tablet {
+      padding: 2rem 4rem;
+    }
+
+    @include desktop {
+      padding: 2rem 8rem;
+    }
+}
+
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.5rem;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 1.4rem;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  @include desktop {
+    font-size: 2rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+  }
 }
 
 ul {
