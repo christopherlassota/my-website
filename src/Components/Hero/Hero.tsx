@@ -6,6 +6,7 @@ import { IconContext } from "react-icons";
 const Hero = () => {
   return (
     <section className="hero">
+      <div className="hero__picture"></div>
       <h1 className="hero__title">Christopher Lassota</h1>
       <h2 className="hero__subtitle">
         Building Intuitive, User-focused applications
@@ -20,7 +21,7 @@ const Hero = () => {
         meaningful projects, and grow as a developer.
       </p>
       <article className="hero__availability">
-        <h2 className="hero__subtitle">Available for new projects</h2>
+        <h3 className="hero__subtitle">Available for new projects</h3>
       </article>
       <article className="hero__actions">
         <div className="hero__buttons">
@@ -32,14 +33,20 @@ const Hero = () => {
           </a>
         </div>
         <div className="hero__icons">
-            <IconContext.Provider value={{ color: "#5E5E5E", size: "24px"}}>
-            <div className="hero__icon">
+          <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>
+            <a href="#" className="hero__link">
+              <button className="hero__socials">
                 <BsGithub />
-            </div>
-            <div className="hero__icon">
-                <BsLinkedin />
-            </div>
-            </IconContext.Provider>
+                Github
+              </button>
+            </a>
+            <a href="#" className="hero__link">
+              <button className="hero__socials">
+            <BsLinkedin />
+                LinkedIn
+              </button>
+            </a>
+          </IconContext.Provider>
         </div>
       </article>
     </section>
