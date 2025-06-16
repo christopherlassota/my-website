@@ -3,12 +3,19 @@
 
 .featuredprojects {
     @include flex-center(column);
+    text-align: center;
     
     @include tablet {
         gap: 2rem;
     }
 
-    
+    &__card-container {
+        @include tablet {
+            @include flex-center(row);
+            gap: 1rem;
+        }
+    }
+
     &__card {
         @include flex-center(column, flex-start, flex-start);
         @include glass-card;

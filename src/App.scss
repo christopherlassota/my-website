@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+   -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 body {
@@ -56,6 +58,15 @@ h3 {
 
   @include desktop {
     font-size: 1.75rem;
+  }
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.125rem;
+
+  @include desktop {
+    font-size: 1.5rem;
   }
 }
 
