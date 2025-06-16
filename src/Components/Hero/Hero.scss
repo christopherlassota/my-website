@@ -3,8 +3,6 @@
 
 .hero {
     @include flex-center(column);
-    @include page-padding;
-    padding: 2rem 0;
     gap: 1rem;
     text-align: center;
 
