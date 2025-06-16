@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.experience {
+    text-align: center;
+
+    &__card {
+        @include glass-card;
+        text-align: start;
+        gap: 1rem;
+    }
+
+    &__header {
+        @include flex-center(column, flex-start, flex-start);
+        // gap: 1rem;
+        position: relative;
+    }
+
+    &__date {
+        background-color: black;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        width: 100%;
+
+        @include tablet {
+            position: absolute;
+            width: auto;
+            right: 0%;
+        }
+    }
+
+    &__list {
+        @include flex-center(column, flex-start, flex-start);
+        gap: 1rem
+    }
+
+    &__item {
+        @include flex-center(row, flex-start, flex-start);
+        gap: 1rem;
+    }
+
+    &__text {
+        width: 80%;
+    }
+}
