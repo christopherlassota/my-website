@@ -3,9 +3,14 @@
 
 .hero {
     @include flex-center(column);
+    @include page-padding;
     padding: 2rem 0;
     gap: 1rem;
     text-align: center;
+
+    @include tablet {
+        gap: 2rem;
+    }
 
     &__picture {
         aspect-ratio: 1;
@@ -28,29 +33,48 @@
         padding: 0.5rem 1.5rem;
         border-radius: 50px;
     }
+
     &__actions {
         width: 100%
     }
+
     &__buttons {
         @include flex-center(column);
         width: 100%;
         gap: 1rem;
+
+        @include tablet {
+            @include flex-center(row)
+        }
     }
+
     &__button {
         @include flex-center(row, flex-start);
         width: 100%;
         background-color: black;
         padding: 0.5rem;
         border: 1px solid white;
+
+        @include tablet {
+            @include flex-center(row);
+            width: auto;
+        }
     }
+
     &__link {
         width: 100%;
+
+        @include tablet {
+            width: auto;
+        }
     }
+
     &__icons {        
         @include flex-center(row);
         padding: 1rem;
         gap: 1rem;
     }
+
     &__socials {
         @include flex-center(row);
         width: 100%;
