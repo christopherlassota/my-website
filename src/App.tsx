@@ -1,14 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-import FeaturedProjects from "./Components/FeaturedProjects/FeaturedProjects";
 import Header from "./Components/Header/Header";
-import Hero from "./Components/Hero/Hero";
+import Home from "./Pages/Home/Home";
 
 const App = () => {
   return (
     <>
-    <Header />
-    <Hero />
-    <FeaturedProjects />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
