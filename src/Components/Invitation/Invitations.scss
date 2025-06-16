@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.invitation {
+    @include flex-center(column);
+    @include glass-card;
+    padding: 2rem;
+    text-align: center;
+    gap: 1rem;
+    @include tablet {
+        gap: 2rem;
+    }
+
+    &__link {
+        width: 100%;
+        @include tablet {
+            width: 30%;
+        }
+    }
+    &__button {
+        color: white;
+        background-color: black;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid white;
+    }
+}
