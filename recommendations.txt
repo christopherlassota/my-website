@@ -1,0 +1,45 @@
+Recommendations for completing the portfolio project
+
+1. Fix content/typos and encoding
+- Correct spelling in About and Experience ("Delievering", "buisness", "reasearch", "english").
+- Replace garbled characters in `Hero.tsx` (â€” â€™) with proper apostrophes/em dashes.
+- Remove duplicate Education card or replace with the correct second entry.
+
+2. Make navigation functional
+- Replace header and footer list items with `Link` components pointing to `"/"`, `"/about"`, and new routes (e.g., `"/projects"`, `"/contact"`).
+- Update the “Let’s Talk”, “Get in Touch”, and “View My Work” buttons to use routes or external URLs.
+
+3. Add missing pages/sections
+- Create `Projects` page with a grid of project cards fed by a data file (JSON/TS array) to avoid repetition.
+- Create `Contact` page with a simple form (name, email, message) and mailto or form handler.
+- Consider a `Resume` link or downloadable PDF in `public/`.
+
+4. Standardize assets
+- In SCSS, use `url("/images/...")` for public assets to avoid path issues in Vite.
+- Add `alt` text for images and use `<img>` where possible for accessibility and SEO.
+
+5. Improve responsiveness and layout
+- Adjust `.hero__picture` sizing; `width: 5%` at tablet looks too small.
+- Ensure cards stack and spacing stays consistent on mobile.
+- Add `max-width` and center constraints for readable line length.
+
+6. Accessibility and semantics
+- Replace `div`/`li` click targets with real links/buttons.
+- Use heading levels in order and avoid skipping levels.
+- Add focus states and sufficient color contrast.
+
+7. Content polish for hiring
+- Add 3–6 real projects with short problem/solution bullets and tech tags.
+- Add metrics (performance gains, users served, process improvements) where possible.
+- Include a brief skills section and tooling (React, TypeScript, Node, SQL, testing).
+
+8. Code cleanup
+- Extract repeated card markup into reusable components (`ProjectCard`, `ExperienceItem`, `EducationItem`).
+- Move static data into `src/data/` so content edits don’t touch JSX.
+- Add ESLint/prettier scripts if not already configured.
+
+Suggested near-term sequence
+1) Fix typos/encoding and image paths.
+2) Add Projects + Contact routes and update navigation.
+3) Build data-driven sections and polish content.
+4) Improve layout, accessibility, and final styling.
