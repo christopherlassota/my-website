@@ -38,6 +38,9 @@
 }
 
 @mixin page-padding {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
   padding: 2rem;
 
   @include tablet {
