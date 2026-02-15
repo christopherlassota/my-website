@@ -1,6 +1,8 @@
 import "./FeaturedProjects.scss";
+import { projects } from "../../data/projects";
 
 const FeaturedProjects = () => {
+  const featured = projects.filter((project) => project.featured);
   return (
     <section className="featuredprojects">
       <h2 className="featuredprojects__title">Featured Projects</h2>
@@ -9,32 +11,25 @@ const FeaturedProjects = () => {
         development
       </h3>
       <div className="featuredprojects__card-container">
-        <article className="featuredprojects__card">
-          <div className="featuredprojects__image"></div>
-          <h4 className="featuredprojects__card-title">InStock</h4>
-          <p className="featuredprojects__card-description">
-            Bandsite was one of my first projects, I learned how to use flexbox
-            to great effect
-          </p>
-          <ul className="featuredprojects__taglist">
-            <li className="featuredprojects__tag">Javascript</li>
-            <li className="featuredprojects__tag">HTML</li>
-            <li className="featuredprojects__tag">CSS</li>
-          </ul>
-        </article>
-        <article className="featuredprojects__card">
-          <div className="featuredprojects__image"></div>
-          <h4 className="featuredprojects__card-title">InStock</h4>
-          <p className="featuredprojects__card-description">
-            Bandsite was one of my first projects, I learned how to use flexbox
-            to great effect
-          </p>
-          <ul className="featuredprojects__taglist">
-            <li className="featuredprojects__tag">Javascript</li>
-            <li className="featuredprojects__tag">HTML</li>
-            <li className="featuredprojects__tag">CSS</li>
-          </ul>
-        </article>
+        {featured.map((project) => (
+          <article key={project.id} className="featuredprojects__card">
+            <div
+              className="featuredprojects__image"
+              style={{ backgroundImage: `url(${project.image})` }}
+            ></div>
+            <h4 className="featuredprojects__card-title">{project.title}</h4>
+            <p className="featuredprojects__card-description">
+              {project.description}
+            </p>
+            <ul className="featuredprojects__taglist">
+              {project.tags.map((tag) => (
+                <li key={`${project.id}-${tag}`} className="featuredprojects__tag">
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import Experience from "../../Components/Experience/Experience";
 import "./About.scss";
+import { education } from "../../data/education";
 
 const About = () => {
     return (
@@ -13,23 +14,25 @@ const About = () => {
                     <h2 className="education__title">
                         Education
                     </h2>
-                <article className="education__card">
-                    <div className="education__card-top">
-                        <p className="education__logo">
-                            MRU
-                        </p>
-                        <div className="education__information">
-                            <h3 className="education__degree">
-                                Bachelor's of Science In Cellular and Molecular Biology
-                            </h3>
-                            <h4 className="education__institute">
-                                Mount Royal University
-                            </h4>
-                            <p className="education__date">2018-2024</p>
+                {education.map((item) => (
+                    <article key={item.id} className="education__card">
+                        <div className="education__card-top">
+                            <p className="education__logo">
+                                {item.logo}
+                            </p>
+                            <div className="education__information">
+                                <h3 className="education__degree">
+                                    {item.degree}
+                                </h3>
+                                <h4 className="education__institute">
+                                    {item.school}
+                                </h4>
+                                <p className="education__date">{item.dates}</p>
+                            </div>
                         </div>
-                    </div>
-                    <p className="education__description">Earned a BSc in Cellular and Molecular Biology with a focus on genetics, biochemistry, and lab research.</p>
-                </article>
+                        <p className="education__description">{item.description}</p>
+                    </article>
+                ))}
             </section>
         </section>
     )
