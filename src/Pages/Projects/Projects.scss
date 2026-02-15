@@ -14,9 +14,37 @@
         width: 100%;
         display: grid;
         gap: 1rem;
+
+        @include tablet {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include desktop {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
     }
 
     &__card {
         @include glass-card;
+    }
+
+    &__image {
+        aspect-ratio: 2;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    &__taglist {
+        @include flex-center(row, flex-start);
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 0.75rem;
+    }
+
+    &__tag {
+        background-color: black;
+        padding: 0.5rem;
     }
 }

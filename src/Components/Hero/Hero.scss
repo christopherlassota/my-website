@@ -17,16 +17,15 @@
         background-position: center;
         background-size: cover;
         border-radius: 50%;
-        width: 30%;
-
-        @include tablet {
-            width: 5%
-        }
+        width: clamp(8rem, 40vw, 14rem);
     }
 
     // &__title {}
     // &__subtitle {}
-    // &__summary {}
+    &__summary {
+        max-width: 48rem;
+        margin: 0 auto;
+    }
     &__availability {
         @include glass-card;
         padding: 0.5rem 1.5rem;
@@ -73,6 +72,7 @@
         @include flex-center(row);
         padding: 1rem;
         gap: 1rem;
+        flex-wrap: wrap;
     }
 
     &__socials {
