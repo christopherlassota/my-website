@@ -2,6 +2,7 @@ import "./Hero.scss";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,9 +15,9 @@ const Hero = () => {
       <p className="hero__summary">
         I recently completed an intensive software development bootcamp, where I
         gained hands-on experience in full-stack development using React,
-        Node.js, and SQL. My background includes diverse roles—from teaching
-        abroad to working in quality control labs—which shaped my adaptability,
-        communication, and problem-solving skills. I’m especially drawn to
+        Node.js, and SQL. My background includes diverse roles from teaching
+        abroad to working in quality control labs, which shaped my adaptability,
+        communication, and problem-solving skills. I'm especially drawn to
         collaborative environments where I can keep learning, contribute to
         meaningful projects, and grow as a developer.
       </p>
@@ -25,26 +26,30 @@ const Hero = () => {
       </article>
       <article className="hero__actions">
         <div className="hero__buttons">
-          <a href="#" className="hero__link">
-            <button className="hero__button">Get in Touch</button>
-          </a>
-          <a href="#" className="hero__link">
-            <button className="hero__button">View My Work</button>
-          </a>
+          <Link to="/contact" className="hero__button">
+            Get in Touch
+          </Link>
+          <Link to="/projects" className="hero__button">
+            View My Work
+          </Link>
         </div>
         <div className="hero__icons">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>
-            <a href="#" className="hero__link">
-              <button className="hero__socials">
-                <BsGithub />
-                Github
-              </button>
+            <a
+              href="#"
+              className="hero__socials"
+              aria-label="GitHub profile (add link)"
+            >
+              <BsGithub />
+              GitHub
             </a>
-            <a href="#" className="hero__link">
-              <button className="hero__socials">
-            <BsLinkedin />
-                LinkedIn
-              </button>
+            <a
+              href="#"
+              className="hero__socials"
+              aria-label="LinkedIn profile (add link)"
+            >
+              <BsLinkedin />
+              LinkedIn
             </a>
           </IconContext.Provider>
         </div>
