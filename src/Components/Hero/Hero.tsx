@@ -14,9 +14,9 @@ const Hero = () => {
       <p className="hero__summary">
         I recently completed an intensive software development bootcamp, where I
         gained hands-on experience in full-stack development using React,
-        Node.js, and SQL. My background includes diverse roles—from teaching
-        abroad to working in quality control labs—which shaped my adaptability,
-        communication, and problem-solving skills. I’m especially drawn to
+        Node.js, and SQL. My background includes diverse roles from teaching
+        abroad to working in quality control labs, which shaped my adaptability,
+        communication, and problem-solving skills. I'm especially drawn to
         collaborative environments where I can keep learning, contribute to
         meaningful projects, and grow as a developer.
       </p>
@@ -37,7 +37,7 @@ const Hero = () => {
             <a href="#" className="hero__link">
               <button className="hero__socials">
                 <BsGithub />
-                Github
+                GitHub
               </button>
             </a>
             <a href="#" className="hero__link">
