@@ -15,16 +15,24 @@ const Footer = () => {
         <ul className="footer__icon-list">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>
             <li className="footer__icon">
-              <BsGithub />
+              <a className="footer__icon-link" href="#" aria-label="GitHub profile (add link)">
+                <BsGithub />
+              </a>
             </li>
             <li className="footer__icon">
-              <BsLinkedin />
+              <a className="footer__icon-link" href="#" aria-label="LinkedIn profile (add link)">
+                <BsLinkedin />
+              </a>
             </li>
             <li className="footer__icon">
-              <BsInstagram />
+              <a className="footer__icon-link" href="#" aria-label="Instagram profile (add link)">
+                <BsInstagram />
+              </a>
             </li>
             <li className="footer__icon">
-              <BsYoutube />
+              <a className="footer__icon-link" href="#" aria-label="YouTube profile (add link)">
+                <BsYoutube />
+              </a>
             </li>
           </IconContext.Provider>
         </ul>
