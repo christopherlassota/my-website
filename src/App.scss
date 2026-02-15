@@ -1,0 +1,101 @@
+@use "./styles/variables" as *;
+@use "./styles/mixins" as *;
+
+* {
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+   -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    flex-direction: row;
+    background: $primary-background;
+    color: $primary-text;
+}
+
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.62rem;
+  margin:  0 0 0.5em 0;
+  line-height: 1.2rem;
+
+  @include tablet {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  @include desktop {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin:  0 0 0.5em 0;
+  line-height: 1.3rem;
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  @include desktop {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.4rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+
+  @include desktop {
+    font-size: 1.75rem;
+  }
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.125rem;
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+}
+
+h5 {
+  font-weight: 300;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+
+  @include tablet {
+    font-size: 1.0625rem;
+  }
+
+  @include desktop {
+    font-size: 1.125rem;
+  }
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+  all: unset;
+}

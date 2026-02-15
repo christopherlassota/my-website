@@ -1,0 +1,8 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.home {
+    @include flex-center(column);
+    @include page-padding;
+    gap: 5rem;
+}

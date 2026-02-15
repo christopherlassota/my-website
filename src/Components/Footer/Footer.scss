@@ -1,0 +1,51 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.footer {
+    @include flex-center(column, flex-start, flex-start);
+    @include page-padding;
+    border-top: 1px solid white;
+    gap: 1rem;
+
+    @include desktop {
+        @include flex-center(row, space-between)
+    }
+
+    &__left {
+        @include flex-center(column, flex-start, flex-start);
+        gap: 1rem;
+
+        @include desktop {
+            @include flex-center(column, flex-start, flex-start);
+            gap: 1rem;
+            width: 50%;
+        }
+    }
+
+    &__right {
+        @include flex-center(column, flex-start, flex-start);
+        gap: 1rem;
+
+        @include desktop {
+            @include flex-center(column, flex-start, flex-start);
+            gap: 1rem;
+        }
+    }
+
+    &__title {
+        font-weight: 500
+    }
+    &__icon-list {
+        @include flex-center(row, space-between, space-between);
+        width: 100%;
+
+        @include desktop {
+            @include flex-center(row, flex-start);
+            gap: 2rem;
+        }
+    }
+    &__quicklink-list {
+        @include flex-center(column, flex-start, flex-start);
+        gap: 1rem;
+    }
+}

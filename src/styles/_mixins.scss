@@ -1,0 +1,50 @@
+@use "./variables" as *;
+
+// =============================
+// Mixins for screen breakpoints
+// =============================
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+// Common flex box settings
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin glass-card {
+  padding: 1rem;
+  background: linear-gradient(
+    15deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+@mixin page-padding {
+  padding: 2rem;
+
+  @include tablet {
+    padding: 2rem 4rem;
+  }
+  
+  @include desktop {
+    padding: 2rem 8rem;
+  }
+}
