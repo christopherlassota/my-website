@@ -1,6 +1,7 @@
 import "./Footer.scss";
 import { BsGithub, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,10 +32,18 @@ const Footer = () => {
       <section className="footer__right">
         <h4 className="footer__title">Quick Links</h4>
         <ul className="footer__quicklink-list">
-          <li className="footer__quicklink">Home</li>
-          <li className="footer__quicklink">About</li>
-          <li className="footer__quicklink">Projects</li>
-          <li className="footer__quicklink">Connect</li>
+          <li>
+            <Link className="footer__quicklink" to="/">Home</Link>
+          </li>
+          <li>
+            <Link className="footer__quicklink" to="/about">About</Link>
+          </li>
+          <li>
+            <Link className="footer__quicklink" to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link className="footer__quicklink" to="/contact">Connect</Link>
+          </li>
         </ul>
       </section>
     </footer>

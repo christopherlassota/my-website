@@ -2,6 +2,7 @@ import "./Hero.scss";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -25,12 +26,12 @@ const Hero = () => {
       </article>
       <article className="hero__actions">
         <div className="hero__buttons">
-          <a href="#" className="hero__link">
+          <Link to="/contact" className="hero__link">
             <button className="hero__button">Get in Touch</button>
-          </a>
-          <a href="#" className="hero__link">
+          </Link>
+          <Link to="/projects" className="hero__link">
             <button className="hero__button">View My Work</button>
-          </a>
+          </Link>
         </div>
         <div className="hero__icons">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>
