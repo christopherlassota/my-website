@@ -46,3 +46,4 @@
 - Branch per task, base `develop`
 - Commit per task so changes can be reviewed together
 - Provide a concise summary of changes after each task
+- Automatically 'git push'
