@@ -2,6 +2,7 @@ import "./Header.scss";
 import { BsList } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -17,20 +18,28 @@ const Header = () => {
           </IconContext.Provider>
         </div>
         <ul className="header__nav-list">
-            <li className="header__nav-link">Home</li>
-            <li className="header__nav-link">About</li>
-            <li className="header__nav-link">Projects</li>
-            <li className="header__nav-link">Contact</li>
+            <li>
+              <Link className="header__nav-link" to="/">Home</Link>
+            </li>
+            <li>
+              <Link className="header__nav-link" to="/about">About</Link>
+            </li>
+            <li>
+              <Link className="header__nav-link" to="/projects">Projects</Link>
+            </li>
+            <li>
+              <Link className="header__nav-link" to="/contact">Contact</Link>
+            </li>
         </ul>
       </nav>
-      <div className="header__contact">
+      <Link className="header__contact" to="/contact">
         <IconContext.Provider value={{color: "white", size:"24px"}}>
             <BsEnvelope />
         </IconContext.Provider>
         <p className="header__contact-text">
             Let's Talk
         </p>
-      </div>
+      </Link>
     </section>
   );
 };

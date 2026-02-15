@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.projects {
+    @include flex-center(column, flex-start, flex-start);
+    @include page-padding;
+    gap: 1.5rem;
+
+    &__subtitle {
+        max-width: 48rem;
+    }
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__card {
+        @include glass-card;
+    }
+}
