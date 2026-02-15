@@ -43,6 +43,6 @@
 6. Optional: add screenshots to `public/images/` and update data.
 
 ## Git
-- Branch per task, base `origin/main`
-- Make a commit after implementing a feature with a detailed message.
+- Branch per task, base `develop`
+- No commits unless explicitly requested
 - Provide a concise summary of changes after each task
