@@ -44,5 +44,5 @@
 
 ## Git
 - Branch per task, base `develop`
-- No commits unless explicitly requested
+- Commit per task so changes can be reviewed together
 - Provide a concise summary of changes after each task
