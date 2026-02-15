@@ -26,26 +26,34 @@ const Hero = () => {
       </article>
       <article className="hero__actions">
         <div className="hero__buttons">
-          <Link to="/contact" className="hero__link">
-            <button className="hero__button">Get in Touch</button>
+          <Link to="/contact" className="hero__button">
+            Get in Touch
           </Link>
-          <Link to="/projects" className="hero__link">
-            <button className="hero__button">View My Work</button>
+          <Link to="/projects" className="hero__button">
+            View My Work
           </Link>
         </div>
         <div className="hero__icons">
           <IconContext.Provider value={{ color: "#5E5E5E", size: "24px" }}>
-            <a href="#" className="hero__link">
-              <button className="hero__socials">
-                <BsGithub />
-                GitHub
-              </button>
+            <a
+              href="https://github.com/christopherlassota"
+              className="hero__socials"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub profile"
+            >
+              <BsGithub />
+              GitHub
             </a>
-            <a href="#" className="hero__link">
-              <button className="hero__socials">
-            <BsLinkedin />
-                LinkedIn
-              </button>
+            <a
+              href="https://www.linkedin.com/in/christopherlassota/"
+              className="hero__socials"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn profile"
+            >
+              <BsLinkedin />
+              LinkedIn
             </a>
           </IconContext.Provider>
         </div>

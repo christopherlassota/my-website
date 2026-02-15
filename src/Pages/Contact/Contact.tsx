@@ -8,6 +8,9 @@ const Contact = () => {
         Interested in working together? Send a message and I’ll reply within 1–2
         business days.
       </p>
+      <p className="contact__email">
+        Email: <a href="mailto:ChristopherLassota@outlook.com">ChristopherLassota@outlook.com</a>
+      </p>
       <form className="contact__form">
         <label className="contact__field">
           Name

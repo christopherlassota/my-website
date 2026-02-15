@@ -10,6 +10,14 @@
         max-width: 48rem;
     }
 
+    &__email {
+        max-width: 48rem;
+    }
+
+    &__email a {
+        text-decoration: underline;
+    }
+
     &__form {
         width: 100%;
         max-width: 40rem;
