@@ -1,4 +1,5 @@
 import "./Projects.scss";
+import { projects } from "../../data/projects";
 
 const Projects = () => {
   return (
@@ -9,14 +10,23 @@ const Projects = () => {
         collaboration.
       </p>
       <div className="projects__grid">
-        <article className="projects__card">
-          <h3 className="projects__card-title">Coming Soon</h3>
-          <p className="projects__card-description">
-            I’m curating a small set of projects with clear outcomes and tech
-            stacks. In the meantime, check the featured projects on the home
-            page.
-          </p>
-        </article>
+        {projects.map((project) => (
+          <article key={project.id} className="projects__card">
+            <div
+              className="projects__image"
+              style={{ backgroundImage: `url(${project.image})` }}
+            ></div>
+            <h3 className="projects__card-title">{project.title}</h3>
+            <p className="projects__card-description">{project.description}</p>
+            <ul className="projects__taglist">
+              {project.tags.map((tag) => (
+                <li key={`${project.id}-${tag}`} className="projects__tag">
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );
