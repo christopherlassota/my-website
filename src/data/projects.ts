@@ -35,4 +35,22 @@ export const projects: Project[] = [
     image: "/images/CoffeeShop.png",
     featured: false,
   },
+  {
+    id: "snaps",
+    title: "Snaps",
+    description:
+      "Photo gallery concept focused on clean grids, image loading, and layout polish.",
+    tags: ["React", "TypeScript", "Sass"],
+    image: "/images/Snaps.png",
+    featured: true,
+  },
+  {
+    id: "wedding-website",
+    title: "Wedding Website",
+    description:
+      "Multi-section marketing site with RSVP flow and elegant, responsive layout.",
+    tags: ["JavaScript", "HTML", "Sass"],
+    image: "/images/WeddingWebsite.png",
+    featured: false,
+  },
 ];

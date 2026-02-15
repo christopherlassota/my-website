@@ -4,6 +4,12 @@
 .about {
     @include flex-center(column);
     @include page-padding;
+    gap: 2rem;
+
+    &__subtitle {
+        max-width: 48rem;
+        text-align: center;
+    }
 }
 
 .education {
@@ -27,7 +33,7 @@
     &__date {
         background-color: Black;
         padding: 0.5rem;
-        width: hug;
+        width: fit-content;
         display: inline-block;
     }
     &__description {}

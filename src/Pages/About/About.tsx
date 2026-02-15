@@ -1,12 +1,13 @@
 import Experience from "../../Components/Experience/Experience";
 import "./About.scss";
 import { education } from "../../data/education";
+import Skills from "../../Components/Skills/Skills";
 
 const About = () => {
     return (
         <section className="about">
             <h1 className="about__title">About Me</h1>
-            <h3 className="about_subtitle">
+            <h3 className="about__subtitle">
                 Delivering robust, scalable, and user-focused solutions that drive business success
             </h3>
             <Experience />
@@ -34,6 +35,7 @@ const About = () => {
                     </article>
                 ))}
             </section>
+            <Skills />
         </section>
     )
 }
