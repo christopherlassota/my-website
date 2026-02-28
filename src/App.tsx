@@ -10,7 +10,7 @@ import Contact from "./Pages/Contact/Contact";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
